@@ -16,6 +16,7 @@ dependencies:
     - sudo apt-get install  referenceassemblies-pcl
     - mozroots --import --sync
     - mono .nuget/NuGet.exe install NUnit.Runners
+    - mono .nuget/NuGet.exe restore InfluxDB.Net.sln
     - xbuild
 
 test:
