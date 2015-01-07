@@ -17,7 +17,9 @@ dependencies:
     - sudo apt-get install p7zip-full
     - wget https://dl.dropboxusercontent.com/u/33940399/NETPortable.7z
     - sudo 7z x NETPortable.7z -y
-    - sudo cp -rf .NETPortable /usr/lib/mono/xbuild-frameworks/ 
+    - sudo cp -rf .NETPortable /usr/lib/mono/xbuild-frameworks/
+    - sudo ls /usr/lib/mono/xbuild-frameworks/.NETPortable/
+    - sudo ls /usr/lib/mono/xbuild-frameworks/.NETPortable/v4.0/Profile/
     - mono .nuget/NuGet.exe restore InfluxDB.Net.sln
     - xbuild
     - mono packages/NUnit.Runners.2.6.4/tools/nunit-console.exe InfluxDB.Net.Tests/bin/Debug/InfluxDB.Net.Tests.dll
