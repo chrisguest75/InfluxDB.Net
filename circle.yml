@@ -19,7 +19,5 @@ dependencies:
     - sudo 7z x NETPortable.7z -y
     - sudo cp -rf .NETPortable /usr/lib/mono/xbuild-frameworks/ 
     - mono .nuget/NuGet.exe restore InfluxDB.Net.sln
-
-test:
-  override:
-    - ./build.sh
+    - xbuild
+    - mono packages/NUnit.Runners.2.6.4/tools/nunit-console.exe InfluxDB.Net.Tests/bin/Debug/InfluxDB.Net.Tests.dll
