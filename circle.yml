@@ -18,7 +18,6 @@ dependencies:
     - wget https://dl.dropboxusercontent.com/u/33940399/NETPortable.7z
     - sudo 7z x NETPortable.7z -y
     - sudo cp -rf .NETPortable /usr/lib/mono/xbuild-frameworks/ 
-    - mono .nuget/NuGet.exe install NUnit.Runners
     - mono .nuget/NuGet.exe restore InfluxDB.Net.sln
 
 test:
