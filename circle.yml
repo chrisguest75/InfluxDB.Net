@@ -16,9 +16,9 @@ dependencies:
     - mozroots --import --sync
     - sudo apt-get install p7zip-full
     - wget https://dl.dropboxusercontent.com/u/33940399/NETPortable.7z
-    - cp NETPortable.7z /usr/lib/mono/xbuild-frameworks/
-    - cd /usr/lib/mono/xbuild-frameworks/
-    - 7z x NETPortable.7z -y
+    - sudo cp NETPortable.7z /usr/lib/mono/xbuild-frameworks/
+    - sudo cd /usr/lib/mono/xbuild-frameworks/
+    - sudo 7z x NETPortable.7z -y
     - mono .nuget/NuGet.exe install NUnit.Runners
     - mono .nuget/NuGet.exe restore InfluxDB.Net.sln
 
