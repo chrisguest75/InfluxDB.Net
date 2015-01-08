@@ -4,7 +4,7 @@ machine:
     
 dependencies:
   pre:
-    - wget http://s3.amazonaws.com/influxdb/influxdb_latest_i386.deb
+    - wget wget https://s3.amazonaws.com/influxdb/influxdb_0.8.7_amd64.deb
     - sudo dpkg -i influxdb_latest_i386.deb
     - sudo /etc/init.d/influxdb start
     - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
