@@ -18,4 +18,4 @@ dependencies:
     - mozroots --import --sync
     - mono .nuget/NuGet.exe restore InfluxDB.Net.sln
     - xbuild
-    - mono packages/NUnit.Runners.2.6.4/tools/nunit-console.exe InfluxDB.Net.Tests/bin/Debug/InfluxDB.Net.Tests.dll
+    #- mono packages/NUnit.Runners.2.6.4/tools/nunit-console.exe InfluxDB.Net.Tests/bin/Debug/InfluxDB.Net.Tests.dll
