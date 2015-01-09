@@ -14,7 +14,8 @@ namespace InfluxDB.Net.Tests
 
         protected override void FinalizeSetUp()
         {
-            _db = new InfluxDb("http://localhost:8086", "root", "root");
+            //_db = new InfluxDb("http://localhost:8086", "root", "root");
+             _db = new InfluxDb("http://enchantmentunderthesea-onepointtwentyone-1.c.influxdb.com:8086", "root", "dc48ace4ff5d5878");
 
             EnsureInfluxDbStarted();
         }
