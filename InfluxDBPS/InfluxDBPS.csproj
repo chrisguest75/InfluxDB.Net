@@ -7,8 +7,8 @@
     <ProjectGuid>{69792FFC-154A-4C91-99E6-CFCFAAFDBBA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InfluxPS</RootNamespace>
-    <AssemblyName>InfluxPS</AssemblyName>
+    <RootNamespace>InfluxDBPS</RootNamespace>
+    <AssemblyName>InfluxDBPS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>Build\InfluxPS.XML</DocumentationFile>
+    <DocumentationFile>Build\InfluxDBPS.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddInfluxDb.cs" />
+    <Compile Include="GetVersionInfluxDb.cs" />
     <Compile Include="PingInfluxDb.cs" />
     <Compile Include="WriteInfluxDb.cs" />
     <Compile Include="OpenInfluxDb.cs" />

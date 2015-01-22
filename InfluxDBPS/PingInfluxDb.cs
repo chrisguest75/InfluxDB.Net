@@ -6,7 +6,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InfluxPS
+namespace InfluxDBPS
 {
     using System;
     using System.Management.Automation;
@@ -18,7 +18,7 @@ namespace InfluxPS
     using InfluxDB.Net.Models;
 
     /// <summary>
-    /// Opens a connection to an InfluxDB
+    /// Pings an InfluxDB
     /// </summary>
     [Cmdlet(VerbsDiagnostic.Ping, "InfluxDb")]
     public class PingInfluxDb : Cmdlet

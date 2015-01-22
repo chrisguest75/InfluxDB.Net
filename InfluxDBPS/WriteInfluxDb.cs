@@ -6,7 +6,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InfluxPS
+namespace InfluxDBPS
 {
     using System;
     using System.Management.Automation;
@@ -30,31 +30,31 @@ namespace InfluxPS
         public IInfluxDb dbConnection { get; set; }
 
         /// <summary>
-        /// 
+        /// The db to write the time series into
         /// </summary>
         [Parameter]
         public string dbName { get; set; }
 
         /// <summary>
-        /// 
+        /// The name of the series
         /// </summary>
         [Parameter]
         public string seriesName { get; set; }
 
         /// <summary>
-        /// 
+        /// Array of columns to write
         /// </summary>
         [Parameter]
         public string[] columns { get; set; }
 
         /// <summary>
-        /// 
+        /// Array of values to write
         /// </summary>
         [Parameter]
         public object[] values { get; set; }
 
         /// <summary>
-        /// 
+        /// Write the data
         /// </summary>
         /// <returns></returns>
         public InfluxDbApiResponse Write()

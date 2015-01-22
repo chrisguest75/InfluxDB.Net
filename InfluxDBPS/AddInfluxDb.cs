@@ -6,7 +6,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InfluxPS
+namespace InfluxDBPS
 {
     using System;
     using System.Management.Automation;

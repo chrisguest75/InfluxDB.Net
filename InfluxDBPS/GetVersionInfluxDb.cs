@@ -1,8 +1,8 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="OpenInfluxDb.cs">
+// <copyright file="GetVersionInfluxDb.cs">
 // </copyright>
 // <summary>
-//   Opens a connection to an InfluxDb
+//   Get the version an InfluxDb
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -15,39 +15,38 @@ namespace InfluxDBPS
     using System.Text;
     using System.Threading.Tasks;
     using InfluxDB.Net;
+    using InfluxDB.Net.Models;
 
     /// <summary>
-    /// Opens a connection to an InfluxDB
+    /// Get the version an InfluxDb
     /// </summary>
-    [Cmdlet(VerbsCommon.Open, "InfluxDb")]
-    public class OpenInfluxDb : Cmdlet
+    [Cmdlet(VerbsCommon.Get, "VersionInfluxDb")]
+    public class GetVersionInfluxDb : Cmdlet
     {
         /// <summary>
-        /// The Uri of the InfluxDB instance
+        /// A connection object to the InfluxDB instance
         /// </summary>
         [Parameter]
-        public string Uri { get; set; }
+        public IInfluxDb dbConnection { get; set; }
 
         /// <summary>
-        /// The user name with credentials to access the instance
+        /// Get the version of the db 
         /// </summary>
-        [Parameter]
-        public string User { get; set; }
+        /// <returns>A version string</returns>
+        private string Version()
+        {
+            var version = this.dbConnection.VersionAsync().Result;
 
-        /// <summary>
-        /// The password for the user
-        /// </summary>
-        [Parameter]
-        public string Password { get; set; }
+            return version;
+        }
 
         /// <summary>
         /// Processes the pipeline
         /// </summary>
         protected override void ProcessRecord()
         {
-            var db = new InfluxDb(this.Uri, this.User, this.Password);
-
-            this.WriteObject(db);
+            var version = this.Version();
+            this.WriteObject(version.ToJson());
         }
     }
 }
